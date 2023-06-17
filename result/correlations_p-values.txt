@@ -1,0 +1,26 @@
+Pearson Correlations
+
+COVA1-07 binding score and expression score: 0.37
+COVA2-14 binding score and expression score: 0.36
+COVA2-18 binding score and expression score: 0.37
+
+COVA1-07 binding score and fusion score: 0.49
+COVA2-14 binding score and fusion score: 0.48
+COVA2-18 binding score and fusion score: 0.50
+
+[1] "graph/cor_rep_COVA107.png correlation: 0.909986596277044"
+[1] "graph/cor_rep_COVA214.png correlation: 0.930867079523283"
+[1] "graph/cor_rep_COVA218.png correlation: 0.906824638846864"
+[1] "graph/cor_bind_A107_vs_A214.png correlation: 0.973452175486165"
+[1] "graph/cor_bind_A107_vs_A218.png correlation: 0.974306685790163"
+[1] "graph/cor_bind_A214_vs_A218.png correlation: 0.972976882810409"
+
+[1] "A107: p-value of diff between silent vs nonsense : 6.43021106365368e-16"
+[1] "A214: p-value of diff between silent vs nonsense : 1.94989337234661e-16"
+[1] "A218: p-value of diff between silent vs nonsense : 4.55048577993795e-16"
+[1] "A107: p-value of diff between silent vs missense : 0.917858305996747"
+[1] "A214: p-value of diff between silent vs missense : 0.633008550791685"
+[1] "A218: p-value of diff between silent vs missense : 0.766351632876858"
+[1] "A107: p-value of diff between missense vs nonsense : 3.25352390166232e-24"
+[1] "A214: p-value of diff between missense vs nonsense : 3.39958975582744e-24"
+[1] "A218: p-value of diff between missense vs nonsense : 1.23300286649897e-23"
