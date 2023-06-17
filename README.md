@@ -1,5 +1,5 @@
-## Deep mutational scanning of SARS-CoV-2 spike HR1 under selection of a public antibody clonotype
-This README describes the analysis in:
+## Characterizing the epitope of a public antibody clonotype to SARS-CoV-2 spike HR1 using deep mutational scanning
+This README describes the analysis in:   
 LINK TO PAPER
 
 ### Input files:
