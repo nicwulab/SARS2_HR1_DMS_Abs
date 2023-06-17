@@ -14,4 +14,4 @@ expr <- expr[match(common_muts, expr$mut), ]
 esc$exp_score <- expr$exp_score
 esc$fus_score <- expr$fus_score
 
-write.table(esc, file='result/S2HR1_DMS_bind_scores_common.tsv', quote=FALSE, sep='\t', col.names = NA)
+write.table(esc, file='result/S2HR1_scores_common.tsv', quote=FALSE, sep='\t', col.names = NA)

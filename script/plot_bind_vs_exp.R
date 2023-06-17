@@ -15,7 +15,7 @@ library(sinaplot)
 library(ggforce)
 require(cowplot)
 
-plot_bind_vs_exp <- function(df, df_special, df_others, df_WT, param, graphname){
+plot_bind_vs_exp <- function(df, df_special, df_others, df_WT, param, title, graphname){
   textsize <- 7
   print (paste(graphname, "correlation: ", cor(df$exp_score, df[[param]])))
   palette <- c('grey',qualpal(n = 5, list(h = c(0, 360), s = c(0.4, 0.6), l = c(0.5, 0.85)))$hex)
@@ -32,7 +32,7 @@ plot_bind_vs_exp <- function(df, df_special, df_others, df_WT, param, graphname)
                                 labels = c(expression(bold('10'^'-5')), expression(bold('10'^'-4')),
                                            expression(bold('10'^'-3')), expression(bold('10'^'-2')),
                                            expression(bold('10'^'-1')))) +
-          ggtitle("COVA2-14") +
+          ggtitle(title) +
           theme_cowplot(12) +
           theme(plot.title=element_text(size=textsize+2,hjust=0.5,vjust=0.5,face="bold",colour = 'black'),
                 axis.text=element_text(size=textsize,face="bold",colour = 'black'),
@@ -63,12 +63,12 @@ coloring <- function(mut){
 group_level <- c('High binding', 'Low binding', 'Natural variants')
 
 df <- read_tsv('result/S2HR1_scores_common.tsv') %>%
-        filter(avg_freq > 0.000015) %>%
+        filter(avg_freq > 0.00002) %>%
         mutate(grouping=mapply(coloring,mut)) %>%
         filter(mut_class %in% c('missense', 'WT'))
 df_special <- filter(df, grouping %in% group_level)
 df_WT <- filter(df, grouping=='WT')
 df_others <- filter(df, grouping=='Others')
-plot_bind_vs_exp(df, df_special, df_others, df_WT, 'A107_score', 'graph/exp_vs_bind_COVA107.png')
-plot_bind_vs_exp(df, df_special, df_others, df_WT, 'A214_score', 'graph/exp_vs_bind_COVA214.png')
-plot_bind_vs_exp(df, df_special, df_others, df_WT, 'A218_score', 'graph/exp_vs_bind_COVA218.png')
+plot_bind_vs_exp(df, df_special, df_others, df_WT, 'A107_score', 'COVA1-07', 'graph/exp_vs_bind_COVA107.png')
+plot_bind_vs_exp(df, df_special, df_others, df_WT, 'A214_score', 'COVA2-14', 'graph/exp_vs_bind_COVA214.png')
+plot_bind_vs_exp(df, df_special, df_others, df_WT, 'A218_score', 'COVA2-18', 'graph/exp_vs_bind_COVA218.png')

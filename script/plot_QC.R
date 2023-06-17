@@ -43,7 +43,7 @@ box_whisk <- function(df, graphname, title){
   }
   
 df <- read_tsv('result/S2HR1_scores_common.tsv') %>%
-        filter(avg_freq > 0.000015)
+        filter(avg_freq > 0.00002)
 print (nrow(df))
 t_test(df, 'silent', 'nonsense')
 t_test(df, 'silent', 'missense')

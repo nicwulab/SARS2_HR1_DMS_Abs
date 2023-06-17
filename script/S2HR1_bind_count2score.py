@@ -13,7 +13,7 @@ def A107_score_calculate(df, rep):
                  df['A107_hi_'+rep+'_count_freq']*1
     A107_norm_factor = df['A107_low_'+rep+'_count_freq'] + df['A107_med_'+rep+'_count_freq'] + \
                  df['A107_hi_'+rep+'_count_freq']
-    A107_avg_freq = A107_norm_factor/4
+    A107_avg_freq = A107_norm_factor/3
     df['A107_avg_freq_'+rep] = A107_avg_freq
     df['A107_weight_'+rep] = A107_weight/A107_norm_factor
     w_summary = df.groupby('mut_class')['A107_weight_'+rep].mean()
@@ -32,7 +32,7 @@ def A214_score_calculate(df, rep):
                  df['A214_hi_'+rep+'_count_freq']*1
     A214_norm_factor = df['A214_low_'+rep+'_count_freq'] + df['A214_med_'+rep+'_count_freq'] + \
                  df['A214_hi_'+rep+'_count_freq']
-    A214_avg_freq = A214_norm_factor/4
+    A214_avg_freq = A214_norm_factor/3
     df['A214_avg_freq_'+rep] = A214_avg_freq
     df['A214_weight_'+rep] = A214_weight/A214_norm_factor
     w_summary = df.groupby('mut_class')['A214_weight_'+rep].mean()
@@ -51,7 +51,7 @@ def A218_score_calculate(df, rep):
                  df['A218_hi_'+rep+'_count_freq']*1
     A218_norm_factor = df['A218_low_'+rep+'_count_freq'] + df['A218_med_'+rep+'_count_freq'] + \
                  df['A218_hi_'+rep+'_count_freq']
-    A218_avg_freq = A218_norm_factor/4
+    A218_avg_freq = A218_norm_factor/3
     df['A218_avg_freq_'+rep] = A218_avg_freq
     df['A218_weight_'+rep] = A218_weight/A218_norm_factor
     w_summary = df.groupby('mut_class')['A218_weight_'+rep].mean()

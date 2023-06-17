@@ -70,7 +70,7 @@ plot_rep_corr <- function(df, ab_name, graphname){
 ##### MAIN #####
 
 df <- read_tsv('result/S2HR1_scores_common.tsv') %>%
-        filter(avg_freq > 0.000015)
+        filter(avg_freq > 0.00002)
 
 print (length(df$avg_freq))
 
