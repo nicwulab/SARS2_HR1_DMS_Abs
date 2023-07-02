@@ -22,7 +22,7 @@ plot_corr <- function(df, graphname, xlab, ylab){
                                       expression(bold('10'^'-3')), expression(bold('10'^'-2')),
                                       expression(bold('10'^'-1')))) +
      theme_cowplot(12) +
-     theme(plot.title=element_text(size=textsize+2,hjust=0.5,vjust=0.5,face="bold",colour = 'black'),
+     theme(plot.title=element_text(size=textsize+1,hjust=0.5,vjust=0.5,face="bold",colour = 'black'),
            axis.text=element_text(size=textsize,face="bold",colour = 'black'),
            axis.text.x=element_text(angle=0,hjust=0.5,vjust=0.5,colour = 'black'),
            axis.text.y=element_text(hjust=0.5,vjust=0.5,colour = 'black'),
@@ -35,8 +35,8 @@ plot_corr <- function(df, graphname, xlab, ylab){
            legend.key.size = unit(0.3,"line")) +
      ylab(ylab) +
      xlab(xlab) +
-     labs(size="Avg freq")
-   ggsave(graphname,p,width=2.5, height=2, bg='white', dpi=600)
+     labs(size="Occurrence\nfreq")
+   ggsave(graphname,p,width=2, height=1.5, bg='white', dpi=600)
  }
 
 plot_rep_corr <- function(df, ab_name, graphname){
@@ -50,7 +50,7 @@ plot_rep_corr <- function(df, ab_name, graphname){
                                      expression(bold('10'^'-1')))) +
     ggtitle(ab_name) +
     theme_cowplot(12) +
-    theme(plot.title=element_text(size=textsize+2,hjust=0.5,vjust=0.5,face="bold",colour = 'black'),
+    theme(plot.title=element_text(size=textsize+1,hjust=0.5,vjust=0.5,face="bold",colour = 'black'),
           axis.text=element_text(size=textsize,face="bold",colour = 'black'),
           axis.text.x=element_text(angle=0,hjust=0.5,vjust=0.5,colour = 'black'),
           axis.text.y=element_text(hjust=0.5,vjust=0.5,colour = 'black'),
@@ -63,8 +63,8 @@ plot_rep_corr <- function(df, ab_name, graphname){
           legend.key.size = unit(0.3,"line")) +
     ylab("Replicate 2") +
     xlab("Replicate 1") +
-    labs(size="Avg freq")
-  ggsave(graphname,p,width=2.5, height=2, bg='white',dpi=600)
+    labs(size="Occurrence\nfreq")
+  ggsave(graphname,p,width=2, height=1.5, bg='white',dpi=600)
 }
 
 ##### MAIN #####

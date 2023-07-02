@@ -31,7 +31,7 @@ box_whisk <- function(df, graphname, title){
   geom_sina(alpha=0.6, pch=16, maxwidth=1.2, size=0.2) +
   ggtitle(title) +
   theme_cowplot(12) +
-  theme(plot.title=element_text(size=textsize+2,hjust=0.5,vjust=0.5,face="bold",colour = 'black'),
+  theme(plot.title=element_text(size=textsize+1,hjust=0.5,vjust=0.5,face="bold",colour = 'black'),
         axis.text=element_text(size=textsize,face="bold",colour = 'black'),
         axis.text.x=element_text(angle=90,hjust=0.5,vjust=0.5,colour = 'black'),
         axis.text.y=element_text(hjust=0.5,vjust=0.5,colour = 'black'),
