@@ -19,3 +19,6 @@ LINK TO PAPER
 1. Run ``Rscript script/plot_correlations.R`` to compare binding scores across antibodies and replicates.
 2. Run ``Rscript script/plot_QC.R`` to compare binding scores among nonsense, missense, and silent mutations.
 3. Run ``Rscript script/plot_bind_vs_exp`` to compare binding and expression scores.
+
+### Expeirmental validation results
+* See [./flow_cytometry](./flow_cytometry)
