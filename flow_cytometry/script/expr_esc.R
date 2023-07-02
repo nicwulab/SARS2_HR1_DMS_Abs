@@ -40,8 +40,12 @@ plot_MFI_change <- function(stats, df, graphname, title){
   if (graphname!='graph/expr_esc.png'){
     p <- p+scale_y_break(c(1.3, 1.79), scales=0.5, ticklabels=c(2, 4, 6)) 
     }
-  ggsave(graphname, width = 1.72, height = 1.82, plot = p, dpi=600, bg='white')
-  #ggsave(graphname, width = 2, height = 2, plot = p, dpi=600, bg='white')
+  if (graphname=='graph/expr_esc.png'){
+    ggsave(graphname, width = 1.4, height = 1.82, plot = p, dpi=600, bg='white')
+    }
+  else{
+    ggsave(graphname, width = 1.7, height = 2, plot = p, dpi=600, bg='white')
+    }
   }
 
 coloring <- function(mut){
