@@ -70,6 +70,9 @@ def main():
     all_resi   = df[df['mut_class'] != 'WT'].groupby('resi').size().reset_index()
     df_by_resi = df
     df_by_resi = df_by_resi[df_by_resi['avg_freq'] >= freq_cutoff]
+    print ('# of missense:', len(df_by_resi[df_by_resi['mut_class'] == 'missense']))
+    print ('# of silent:', len(df_by_resi[df_by_resi['mut_class'] == 'silent']))
+    print ('# of nonsense:', len(df_by_resi[df_by_resi['mut_class'] == 'nonsense']))
     df_by_resi = df_by_resi[df_by_resi['mut_class'] != 'WT']
     df_by_resi = df_by_resi[df_by_resi['mut_class'] != 'silent']
     df_by_resi = df_by_resi[df_by_resi['mut_class'] != 'nonsense']

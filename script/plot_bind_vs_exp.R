@@ -61,7 +61,7 @@ coloring <- function(mut){
   if (mut %in% c("T961F", "V987C", "Q1010W", "Q1005R")){return ("Low binding")}
   else if (mut %in% c("V915H")){return ("High binding")}
   else if (mut %in% c("WT")){return ("WT")}
-  else if (mut %in% c("D950N", "Q954H", "N969K", "L981F", "S982A", "T1027I")){return ("Natural variants")}
+  else if (mut %in% c("D950N", "Q954H")){return ("Natural variants")}#, "N969K", "L981F", "S982A", "T1027I")){return ("Natural variants")}
   else {return ('Others')}
   } 
 

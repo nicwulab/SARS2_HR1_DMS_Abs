@@ -14,11 +14,17 @@ LINK TO PAPER
 3. Run ``python script/S2HR1_bind_count_nuc2aa.py`` to generate [amino acid count file](./result/S2HR1_bind_count_trimmed_aa.tsv). 
 4. Run ``python script/S2HR1_bind_count2score.py`` to generate [binding score file](./result/S2HR1_bind_scores.tsv).
 5. Run ``Rscript script/common_muts.R`` to add expression and fusion scores into the [final score file](./result/S2HR1_scores_common.tsv).
+6. Run ``python script/S2HR1_bind_resi_analysis.py`` to generate [mutational effect file](./result/S2HR1_adj_score_by_resi.tsv)
+7. Run ``python script/Bfactor_to_score.py`` to generate [PDB with mutational effect as B factor](PDB/6vxx_score.pdb)
 
 ### Plot correlations between replicates and between antibodies
 1. Run ``Rscript script/plot_correlations.R`` to compare binding scores across antibodies and replicates.
 2. Run ``Rscript script/plot_QC.R`` to compare binding scores among nonsense, missense, and silent mutations.
 3. Run ``Rscript script/plot_bind_vs_exp`` to compare binding and expression scores.
+
+### Analyzing mutational effects 
+1. Run ``Rscript script/plot_adj_bind_score.R`` to plot mutational effects along residue positions.
+2. Run ``pymol script/plot_Bfactor_as_score.pml`` to generate structural figure colored according to mutational effects.
 
 ### Expeirmental validation results
 * See [./flow_cytometry](./flow_cytometry)
