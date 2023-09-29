@@ -1,6 +1,6 @@
 ## Characterizing the epitope of a public antibody clonotype to SARS-CoV-2 spike HR1 using deep mutational scanning
 This README describes the analysis in:   
-LINK TO PAPER
+[Evidence of antigenic drift in the fusion machinery core of SARS-CoV-2 spike](https://www.biorxiv.org/content/10.1101/2023.09.27.559757v1)
 
 ### Input files:
 * Raw reads from [BioProject PRJNA888135](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA888135)
